@@ -2,7 +2,15 @@ import "@styles/globals.scss";
 
 import { MainLayout } from "@layouts/MainLayout";
 import type { AppProps } from "next/app";
+import dynamic from "next/dynamic";
 
+const SubstrateContextProvider = dynamic(
+  () =>
+    import("ts-substrate-lib").then((data) => data.SubstrateContextProvider),
+  {
+    ssr: false,
+  }
+);
 /**
  * Default layout for page component
  */
@@ -15,7 +23,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const PageContent = Component as IPageComponent;
 
-  return <MainLayout>{getLayout(<PageContent {...pageProps} />)}</MainLayout>;
+  return (
+    <SubstrateContextProvider>
+      <MainLayout>{getLayout(<PageContent {...pageProps} />)}</MainLayout>
+    </SubstrateContextProvider>
+  );
 }
 
 export default MyApp;
