@@ -26,6 +26,7 @@
       "@public/*": ["public/*"],
       "@services/*": ["services/*"],
       "@screens/*": ["screens/*"],
+      "@constants/*": ["constants/*"],
       "@utils/*": ["utils/*"],
       "@hooks/*": ["hooks/*"],
       "@types/*": ["types/*"],

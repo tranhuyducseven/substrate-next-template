@@ -1,8 +1,8 @@
 import { DefaultLayout } from "@layouts/DefaultLayout";
-import { AppScreen } from "@screens/app";
+import { HomeScreen } from "@screens/home";
 
 const Home: IPageComponent = () => {
-  return <AppScreen />;
+  return <HomeScreen />;
 };
 
 Home.getLayout = (screen) => <DefaultLayout>{screen}</DefaultLayout>;

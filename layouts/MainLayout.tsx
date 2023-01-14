@@ -2,7 +2,7 @@ import { useAppStore } from "@states/app";
 import { cx } from "@utils/tools";
 
 export const MainLayout: IComponent = ({ children }) => {
-  // Manual switch darkmode with state
+  // Manual switch darkMode with state
   const { darkMode } = useAppStore();
 
   return (
@@ -15,7 +15,7 @@ export const MainLayout: IComponent = ({ children }) => {
       )}
     >
       {/* Smooth out darkmode transition with transition-all */}
-      <div className="w-full h-full bg-white dark:bg-black transition-all">
+      <div className="w-full h-full bg-white dark:bg-default transition-all">
         {children}
       </div>
     </div>
