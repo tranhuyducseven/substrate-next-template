@@ -4,12 +4,9 @@ import { ConnectionLogo } from "@components/ConnectionLogo";
 import { APP_NAME } from "@env";
 import { useAppStore } from "@states/app";
 import { cx } from "@utils/tools";
-import Head from "next/head";
-import { useSubstrateStore } from "ts-substrate-lib";
 
 export const HomeScreen: IComponent = () => {
   const { darkMode } = useAppStore();
-  const { socket } = useSubstrateStore().substrateState;
 
   return (
     <div className={cx("p-40  relative h-screen py-0 px-8")}>
@@ -21,7 +18,7 @@ export const HomeScreen: IComponent = () => {
           />
           <h1>{APP_NAME}</h1>
         </div>
-        <ConnectionLogo route="/app" content={`Connected to ${socket}`} />
+        <ConnectionLogo route="/app" />
       </main>
 
       {darkMode === "dark" ? <AnimationBox /> : null}
