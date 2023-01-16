@@ -1,5 +1,6 @@
 import "@styles/globals.scss";
 
+import { LoadingSVG } from "@components/SVGIcons/LoadingSVG";
 import { MainLayout } from "@layouts/MainLayout";
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
@@ -9,6 +10,11 @@ const SubstrateContextProvider = dynamic(
     import("ts-substrate-lib").then((data) => data.SubstrateContextProvider),
   {
     ssr: false,
+    loading: () => (
+      <div className="w-full h-screen bg-default flex items-center justify-center">
+        <LoadingSVG width={72} height={72} />
+      </div>
+    ),
   }
 );
 /**

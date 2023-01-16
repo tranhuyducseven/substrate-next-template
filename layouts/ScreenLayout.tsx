@@ -1,24 +1,17 @@
 import DarkModeButton from "@components/DarkModeButton";
-import { useAppStore } from "@states/app";
-import Image from "next/image";
-import Link from "next/link";
+import { HomeSVG } from "@components/SVGIcons/HomeSVG";
+import { useRouter } from "next/router";
 
 export const ScreenLayout: IComponent = ({ children }) => {
-  const { darkMode } = useAppStore();
+  const router = useRouter();
   return (
     <div className="w-full h-screen">
-      <div className="py-8 px-4">
-        <a className="cursor-pointer  p-3">
-          <Link href="/">
-            <Image
-              className="hover:scale-105"
-              src={`${darkMode === "dark" ? "/home-white.png" : "/home.png"}`}
-              alt="/"
-              width={28}
-              height={28}
-            />
-          </Link>
-        </a>
+      <div className="py-8 px-8" onClick={() => router.push("/")}>
+        <HomeSVG
+          className="cursor-pointer hover:scale-105 duration-150  dark:text-green-400"
+          width={28}
+          height={28}
+        />
       </div>
       <DarkModeButton />
       <div className="">{children}</div>

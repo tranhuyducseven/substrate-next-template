@@ -2,9 +2,10 @@ import { useAppStore } from "@states/app";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-export const ShiftButton: IComponent<{
+export const ConnectionLogo: IComponent<{
   route?: string;
-}> = ({ route }) => {
+  content?: string;
+}> = ({ route, content }) => {
   const router = useRouter();
   const { darkMode } = useAppStore();
   return (
@@ -23,12 +24,12 @@ export const ShiftButton: IComponent<{
           height={300}
           layout="responsive"
         />
-        <span
+        <div
           style={{ letterSpacing: "6px" }}
-          className="font-thin text-black text-lg pt-2"
+          className="font-thin text-black text-lg pt-2 text-center"
         >
-          CONNECT TO THE APP
-        </span>
+          {content ?? "CONNECT TO THE APP"}
+        </div>
       </div>
     </div>
   );
