@@ -10,6 +10,7 @@ const nextConfig = nextTranslate({
     TEAM_NAME: process.env.TEAM_NAME || "UNKNOWN",
     IS_DEV: process.env.NODE_ENV !== "production",
     APP_NAME: process.env.APP_NAME,
+    PROVIDER_SOCKET: process.env.PROVIDER_SOCKET,
   },
 });
 

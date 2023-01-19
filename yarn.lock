@@ -3396,10 +3396,10 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-ts-substrate-lib@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/ts-substrate-lib/-/ts-substrate-lib-0.0.7.tgz#40e317aec5170ae73e6a49171c8be85f72b526b9"
-  integrity sha512-E1dRb10cpLQ4B5t9FO7Nyz5lmLSSYuZ//2OBOboDXBVm15LkboCe91Smb77J7BuZuyuv2mlLquWwaVf1XZpbFQ==
+ts-substrate-lib@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/ts-substrate-lib/-/ts-substrate-lib-0.0.8.tgz#d42068009f2a2e188a205ba8339312bde053337f"
+  integrity sha512-uS2WQhPwel4UXYp5xPHnHQnURXAKP3dJM00lTXmf5ME5RNPK9m/hqgSzUZe0vN6M4VLQ47sMbvrtbB2HIAqoVQ==
 
 tsconfig-paths@^3.14.1:
   version "3.14.1"

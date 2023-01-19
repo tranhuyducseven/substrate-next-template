@@ -9,6 +9,7 @@ interface IRuntimeConfig {
   IS_DEV: boolean;
   TEAM_NAME: string;
   APP_NAME: string;
+  PROVIDER_SOCKET: string;
 }
 
 const { publicRuntimeConfig } = getConfig();
@@ -20,4 +21,5 @@ export const {
   IS_DEV = false,
   TEAM_NAME,
   APP_NAME,
+  PROVIDER_SOCKET,
 } = publicRuntimeConfig as IRuntimeConfig;

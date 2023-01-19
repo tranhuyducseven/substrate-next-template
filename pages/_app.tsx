@@ -1,9 +1,11 @@
 import "@styles/globals.scss";
 
 import { LoadingSVG } from "@components/SVGIcons/LoadingSVG";
+import { PROVIDER_SOCKET } from "@env";
 import { MainLayout } from "@layouts/MainLayout";
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
+import { ISubstrateConfigs } from "ts-substrate-lib";
 
 const SubstrateConnectionLayout = dynamic(
   () =>
@@ -30,9 +32,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     ((children) => <DefaultLayout>{children}</DefaultLayout>);
 
   const PageContent = Component as IPageComponent;
+  const configs: ISubstrateConfigs = {
+    providerSocket: PROVIDER_SOCKET,
+  };
 
   return (
-    <SubstrateConnectionLayout>
+    <SubstrateConnectionLayout configs={configs}>
       <MainLayout>{getLayout(<PageContent {...pageProps} />)}</MainLayout>
     </SubstrateConnectionLayout>
   );
