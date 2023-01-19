@@ -3396,10 +3396,10 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-ts-substrate-lib@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/ts-substrate-lib/-/ts-substrate-lib-0.0.3.tgz#91ed84e0fb4b695ccd15f5dfebbf6513e77c7664"
-  integrity sha512-Oc2kRaCTXFKpMH8loneo/ZNOOX2CGlW4ionLinMxv5+8Kw+5t1a1VCsp+nreg96tPPj34vgbrfjLmjvtnvK1nw==
+ts-substrate-lib@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/ts-substrate-lib/-/ts-substrate-lib-0.0.5.tgz#bd352766fb9d418d69417e10e66ff8b71dbf9df7"
+  integrity sha512-8yNK7a8rBk+yuqRBtyVZCxoFQlt5Wf0zg16+pdSfs65bQ7IxjhzpuHuHTjy1DmIwXV8gjRZxVKVykEdb7q+tpQ==
   dependencies:
     "@polkadot/extension-dapp" "^0.44.8"
 
