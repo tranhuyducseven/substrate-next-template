@@ -2,7 +2,7 @@ import DarkModeButton from "@components/DarkModeButton";
 
 export const DefaultLayout: IComponent = ({ children }) => {
   return (
-    <div className="w-full h-screen relative">
+    <div className="relative">
       <DarkModeButton />
       <>{children}</>
     </div>

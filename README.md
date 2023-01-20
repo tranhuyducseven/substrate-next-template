@@ -1,8 +1,8 @@
-# DEVIN NextJS Template
+# Substrate NextJS Template
 
-> Helping when start new frontend project
+> Helping when start new substrate frontend project
 
-This is NextJS with React 18 template, which support auto format with eslint and intergrate `husky` for code checking before commit. This will help in smooth out project building.
+This is NextJS with React 18 template, which support auto format with eslint and intergrte `husky` for code checking before commit. This will help in smooth out project building.
 
 ## Project detail
 
@@ -50,7 +50,7 @@ This is NextJS with React 18 template, which support auto format with eslint and
 ## Tech included
 
 - `NextJS + Typescript` Base source
-- `RecoilJS` State managerment
+- `Zustand` State managerment
 - `Husky` Git helper
 - `SCSS modules` Style system
 - `Eslint and Prettier` Rule of code
