@@ -1,46 +1,37 @@
+import { Alert } from "@material-tailwind/react";
+
 interface IAlertTemplateProps {
-  type: string;
   className?: string;
-  header: string;
-  content: string[];
+  header?: string;
+  content: string;
 }
 export const AlertTemplate: IComponent<IAlertTemplateProps> = ({
   className,
-  type = "Danger",
   header,
   content,
 }) => {
   return (
-    <div
-      className={`flex w-fit h-fit p-4 mb-4 text-lg text-red-700 bg-red-100 rounded-lg dark:bg-gray-800 dark:text-red-400 ${className}`}
-      role="alert"
+    <Alert
+      className={className}
+      icon={
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="currentColor"
+          className="h-6 w-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      }
     >
-      <svg
-        aria-hidden="true"
-        className="flex-shrink-0 inline w-5 h-5 mr-3"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-          clip-rule="evenodd"
-        ></path>
-      </svg>
-      <span className="sr-only">{type}</span>
-      <div>
-        <div>{header}:</div>
-        {content.length > 1 ? (
-          <ul className="mt-1.5 ml-4 list-disc list-inside">
-            {content.map((c: string, idx: number) => (
-              <li key={idx}>{c}</li>
-            ))}
-          </ul>
-        ) : (
-          <div>{content}</div>
-        )}
-      </div>
-    </div>
+      {header && <div className="font-bold text-xl">{header}</div>}
+      <div>{content}</div>
+    </Alert>
   );
 };

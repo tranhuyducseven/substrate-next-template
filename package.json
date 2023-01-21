@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
+    "@material-tailwind/react": "^1.2.5",
     "@polkadot/api": "^9.11.2",
     "@polkadot/extension-dapp": "^0.44.6",
     "@polkadot/keyring": "^10.2.6",
@@ -26,7 +27,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-transition-group": "^4.4.5",
-    "ts-substrate-lib": "^0.0.10",
+    "ts-substrate-lib": "^0.0.11",
     "zustand": "^4.3.1"
   },
   "devDependencies": {

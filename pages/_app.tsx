@@ -20,6 +20,12 @@ const SubstrateConnectionLayout = dynamic(
   }
 );
 
+const ThemeProvider = dynamic(() =>
+  import("@material-tailwind/react/context/theme").then(
+    (data) => data.ThemeProvider
+  )
+);
+
 /**
  * Default layout for page component
  */
@@ -37,9 +43,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   };
 
   return (
-    <SubstrateConnectionLayout configs={configs}>
-      <MainLayout>{getLayout(<PageContent {...pageProps} />)}</MainLayout>
-    </SubstrateConnectionLayout>
+    <ThemeProvider value={undefined}>
+      <SubstrateConnectionLayout configs={configs}>
+        <MainLayout>{getLayout(<PageContent {...pageProps} />)}</MainLayout>
+      </SubstrateConnectionLayout>
+    </ThemeProvider>
   );
 }
 
