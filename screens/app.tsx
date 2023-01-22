@@ -1,4 +1,5 @@
 import { AlertTemplate } from "@components/AlertTemplate";
+import { AccountSelector } from "@components/Substrate/AccountSelector";
 import { LoadingSVG } from "@components/SVGIcons/LoadingSVG";
 import { useCallback } from "react";
 import { API_STATES, useSubstrateConnection } from "ts-substrate-lib";
@@ -7,13 +8,13 @@ export const AppScreen: IComponent = () => {
   const { substrateConnection } = useSubstrateConnection();
   const { apiState, apiError, keyringState } = substrateConnection;
 
-  const errorMessages = useCallback((errObj) => {
+  const errorMessages = useCallback((errObj: any) => {
     return (
       <div className="h-full py-8 flex justify-center items-start">
         <AlertTemplate
-          type="Info"
           header="Error Connecting to Substrate"
-          content={[`Connection to websocket '${errObj?.target?.url}' failed.`]}
+          content={`Connection to websocket '${errObj?.target?.url}' failed.`}
+          className="w-fit h-fit text-lg text-red-700 bg-red-100  dark:bg-red-700 dark:text-white"
         />
       </div>
     );
@@ -40,5 +41,9 @@ export const AppScreen: IComponent = () => {
     );
   }
 
-  return <div>Hello world</div>;
+  return (
+    <div className="relative">
+      <AccountSelector className="absolute bottom-6 right-0 left-0 flex justify-center" />
+    </div>
+  );
 };

@@ -13,7 +13,7 @@ export const ConnectionLogo: IComponent<{
       onClick={() => (route ? router.push(route) : router.push("/"))}
       className={`${
         darkMode === "dark" ? "animate-pulse" : ""
-      } z-50 w-[400px]  bg-[#ffdd50] button-connect hover:scale-105 active:scale-90 duration-300 border-8 border-default dark:border-white px-8 pt-8 mt-5 rounded-lg  cursor-pointer`}
+      } z-50 w-[400px]  bg-primary button-connect hover:scale-105 active:scale-90 duration-300 border-8 border-default dark:border-white px-8 pt-8 mt-5 rounded-lg  cursor-pointer`}
       style={{ animationDuration: "4s" }}
     >
       <div className="pb-2">

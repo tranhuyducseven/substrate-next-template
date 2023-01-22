@@ -1,4 +1,5 @@
 import Logo from "@public/devin.png";
+import LogoDarkMode from "@public/devin2.png";
 import { useAppStore } from "@states/app";
 import { cx } from "@utils/tools";
 import Head from "next/head";
@@ -32,8 +33,13 @@ export const MainLayout: IComponent = ({ children }) => {
             rel="noreferrer"
           >
             Powered by{" "}
-            <span className="h-4 ml-2">
-              <Image src={Logo} alt="deVin Logo" width={72} height={16} />
+            <span className="h-4 ml-2 bg-default p-2 rounded-lg dark:bg-primary">
+              <Image
+                src={darkMode === "dark" ? LogoDarkMode : Logo}
+                alt="deVin Logo"
+                width={72}
+                height={16}
+              />
             </span>
           </a>
         </footer>
