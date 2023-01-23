@@ -1,6 +1,8 @@
 import { AlertTemplate } from "@components/AlertTemplate";
 import { AccountSelector } from "@components/Substrate/AccountSelector";
+import { NodeInfo } from "@components/Substrate/NodeInfo";
 import { LoadingSVG } from "@components/SVGIcons/LoadingSVG";
+import { card } from "@configs/styles";
 import { useCallback } from "react";
 import { API_STATES, useSubstrateConnection } from "ts-substrate-lib";
 
@@ -42,8 +44,13 @@ export const AppScreen: IComponent = () => {
   }
 
   return (
-    <div className="relative">
-      <AccountSelector className="absolute bottom-6 right-0 left-0 flex justify-center" />
-    </div>
+    <main>
+      <div className="relative">
+        <AccountSelector className="absolute bottom-6 right-0 left-0 flex justify-center" />
+      </div>
+      <div id="container" className="grid grid-cols-4 gap-4 mx-4">
+        <NodeInfo className={card} />
+      </div>
+    </main>
   );
 };
