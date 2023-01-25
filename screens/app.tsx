@@ -1,6 +1,7 @@
 import { AlertTemplate } from "@components/AlertTemplate";
 import { AccountSelector } from "@components/Substrate/AccountSelector";
-import { NodeInfo } from "@components/Substrate/NodeInfo";
+import { MetadataCard } from "@components/Substrate/MetadataCard";
+import { NodeCard } from "@components/Substrate/NodeCard";
 import { LoadingSVG } from "@components/SVGIcons/LoadingSVG";
 import { card } from "@configs/styles";
 import { useCallback } from "react";
@@ -49,7 +50,8 @@ export const AppScreen: IComponent = () => {
         <AccountSelector className="absolute bottom-6 right-0 left-0 flex justify-center" />
       </div>
       <div id="container" className="grid grid-cols-4 gap-4 mx-4">
-        <NodeInfo className={card} />
+        <NodeCard className={card} />
+        <MetadataCard className={card} />
       </div>
     </main>
   );

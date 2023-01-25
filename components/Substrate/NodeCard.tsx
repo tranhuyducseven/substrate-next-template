@@ -1,5 +1,4 @@
 import { ComponentLoading } from "@components/ComponentLoading";
-import { LoadingSVG } from "@components/SVGIcons/LoadingSVG";
 import { SettingSVG } from "@components/SVGIcons/SettingSVG";
 import {
   Card,
@@ -11,7 +10,7 @@ import { Text } from "@polkadot/types";
 import { useEffect, useState } from "react";
 import { useSubstrateConnection } from "ts-substrate-lib";
 
-export const NodeInfo: IComponent<{
+export const NodeCard: IComponent<{
   className?: string;
 }> = ({ className }) => {
   const { substrateConnection } = useSubstrateConnection();
