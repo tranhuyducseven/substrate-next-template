@@ -1,5 +1,6 @@
 import { AlertTemplate } from "@components/AlertTemplate";
 import { AccountSelector } from "@components/Substrate/AccountSelector";
+import { BlockNumberCard } from "@components/Substrate/BlockNumberCard";
 import { MetadataCard } from "@components/Substrate/MetadataCard";
 import { NodeCard } from "@components/Substrate/NodeCard";
 import { LoadingSVG } from "@components/SVGIcons/LoadingSVG";
@@ -49,9 +50,11 @@ export const AppScreen: IComponent = () => {
       <div className="relative">
         <AccountSelector className="absolute bottom-6 right-0 left-0 flex justify-center" />
       </div>
-      <div id="container" className="grid grid-cols-4 gap-4 mx-4">
+      <div id="container" className="grid grid-cols-4 gap-4 mx-40">
         <NodeCard className={card} />
         <MetadataCard className={card} />
+        <BlockNumberCard className={card} />
+        <BlockNumberCard className={card} finalized />
       </div>
     </main>
   );
