@@ -56,3 +56,12 @@ a {
   }
 }
 
+// override styles of label's radio button
+.dark .inline-flex.items-center
+  > label.text-gray-700.font-light.select-none.cursor-pointer.mt-px {
+  color: white;
+}
+.inline-flex.items-center
+  > label.text-gray-700.font-light.select-none.cursor-pointer.mt-px {
+  color: #424242;
+}
