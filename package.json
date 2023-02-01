@@ -1,5 +1,5 @@
 {
-  "name": "next-template",
+  "name": "substrate-next-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,6 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
-    "@material-tailwind/react": "^1.2.5",
     "@polkadot/api": "^9.11.2",
     "@polkadot/extension-dapp": "^0.44.6",
     "@polkadot/keyring": "^10.2.6",
@@ -27,10 +26,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-transition-group": "^4.4.5",
-    "ts-substrate-lib": "^0.0.11",
+    "ts-substrate-lib": "^0.1.0",
     "zustand": "^4.3.1"
   },
   "devDependencies": {
+    "@material-tailwind/react": "^1.2.5",
     "@npmcli/config": "^6.1.1",
     "@types/node": "18.7.9",
     "@types/react": "18.0.17",
