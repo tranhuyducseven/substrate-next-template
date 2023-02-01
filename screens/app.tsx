@@ -3,6 +3,7 @@ import { AccountSelector } from "@components/Substrate/AccountSelector";
 import { BlockNumberCard } from "@components/Substrate/BlockNumberCard";
 import { MetadataCard } from "@components/Substrate/MetadataCard";
 import { NodeCard } from "@components/Substrate/NodeCard";
+import { PalletController } from "@components/Substrate/PalletController";
 import { LoadingSVG } from "@components/SVGIcons/LoadingSVG";
 import { card } from "@configs/styles";
 import { useCallback } from "react";
@@ -14,7 +15,7 @@ export const AppScreen: IComponent = () => {
 
   const errorMessages = useCallback((errObj: any) => {
     return (
-      <div className="h-full py-8 flex justify-center items-start">
+      <div className="h-screen py-8 flex justify-center items-start">
         <AlertTemplate
           header="Error Connecting to Substrate"
           content={`Connection to websocket '${errObj?.target?.url}' failed.`}
@@ -26,7 +27,7 @@ export const AppScreen: IComponent = () => {
 
   const loadingMessages = useCallback((msg: string) => {
     return (
-      <div className="h-full flex items-center justify-center pb-20 gap-x-4">
+      <div className="h-screen flex items-center justify-center pb-20 gap-x-4">
         <LoadingSVG width={40} height={40} />
         <div className="text-xl font-semibold">{msg}, please wait...</div>
       </div>
@@ -44,17 +45,19 @@ export const AppScreen: IComponent = () => {
       "Loading accounts (please review any extension's authorization)"
     );
   }
-
   return (
-    <main>
+    <main className="mx-40 min-h-screen">
       <div className="relative">
         <AccountSelector className="absolute bottom-6 right-0 left-0 flex justify-center" />
       </div>
-      <div id="container" className="grid grid-cols-4 gap-4 mx-40">
+      <div id="container" className="grid grid-cols-4 gap-4">
         <NodeCard className={card} />
         <MetadataCard className={card} />
         <BlockNumberCard className={card} />
         <BlockNumberCard className={card} finalized />
+      </div>
+      <div className="mt-20 py-20">
+        <PalletController />
       </div>
     </main>
   );

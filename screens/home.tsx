@@ -8,7 +8,7 @@ import { cx } from "@utils/tools";
 export const HomeScreen: IComponent = () => {
   const { darkMode } = useAppStore();
   return (
-    <div className={cx("relative pt-40 pb-20 px-8")}>
+    <div className={cx("relative py-12 px-8")}>
       <main className="relative z-20 flex flex-col justify-center items-center p-0">
         <div className="m-0 leading-normal text-[4rem] text-center">
           <TemplateComponent
